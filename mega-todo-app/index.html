@@ -5,12 +5,43 @@
   <title>ToDo List</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+body>
   <header>
-    <h1>ToDo List</h1>
+    <!-- Logo -->
+    <img src="image/ACM.png" alt="ACM Logo" id="logo">
+    <h1>Your ToDo List</h1>
   </header>
 
   <main>
+
+    <!-- Incomplete Tasks -->
+    <section id="incomplete-tasks">
+      <h2>Incomplete Tasks</h2>
+
+      <!-- Work Category -->
+      <h3>Work</h3>
+      <ul>
+        <li>Work Task 1</li>
+        <li>Work Task 2</li>
+      </ul>
+
+      <!-- Private Category -->
+      <h3>Private</h3>
+      <ul>
+        <li>Private Task 1</li>
+        <li>Private Task 2</li>
+      </ul>
+    </section>
+
+    <!-- Completed Tasks -->
+    <section id="completed-tasks">
+      <h2>Completed Tasks</h2>
+      <ul>
+        <li>Take out the trash</li>
+      </ul>
+    </section>
+
+    <!-- Task Table -->
     <section id="tasks">
       <h2>Task List</h2>
       <table>
@@ -18,20 +49,24 @@
           <tr>
             <th>Task</th>
             <th>Priority</th>
+            <th>Deadline</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>Submit the report</td>
             <td class="stars" data-level="3">★★★</td>
+            <td>Reiwa 7, September 5</td>
           </tr>
           <tr>
             <td>Clean the room</td>
             <td class="stars" data-level="2">★★</td>
+            <td>Reiwa 7, September 6</td>
           </tr>
           <tr>
             <td>Check emails</td>
             <td class="stars" data-level="1">★</td>
+            <td>Reiwa 7, September 7</td>
           </tr>
         </tbody>
       </table>
@@ -41,12 +76,13 @@
   <footer>
     <p>© 2025 ToDo Inc.</p>
   </footer>
+
   <script>
-    // クリック時に★を切り替える
+    // Change star level when clicked
     document.querySelectorAll(".stars").forEach(starCell => {
       starCell.addEventListener("click", () => {
         let level = parseInt(starCell.getAttribute("data-level")) || 1;
-        level = level % 5 + 1; // 1〜5の間でループ
+        level = level % 5 + 1;
         starCell.setAttribute("data-level", level);
         starCell.textContent = "★".repeat(level);
       });
