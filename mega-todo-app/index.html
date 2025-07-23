@@ -1,18 +1,44 @@
 <!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ToDoリスト</title>
+
+  <!-- フォントの読み込み -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;400;700&display=swap" rel="stylesheet">
+
+  <!-- CSSファイルのリンク -->
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>ToDo List</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 body>
   <header>
     <!-- Logo -->
     <img src="image/ACM.png" alt="ACM Logo" id="logo">
     <h1>Your ToDo List</h1>
+=======
+
+<body>
+  <header>
+    <!-- ロゴ画像の追加 -->
+    <img src="image/ACM.png" alt="ACMロゴ" id="logo">
+    <h1>あなたのToDoリスト</h1>
+
+
   </header>
 
   <main>
+
 
     <!-- Incomplete Tasks -->
     <section id="incomplete-tasks">
@@ -42,6 +68,32 @@ body>
     </section>
 
     <!-- Task Table -->
+=======
+    <!-- 未完了タスク -->
+    <section id="incomplete-tasks">
+      <h2>未完了タスク</h2>
+
+      <!-- 仕事カテゴリ -->
+      <h3>仕事</h3>
+      <ul>
+        <li>仕事のタスク1</li>
+        <li>仕事のタスク2</li>
+      </ul>
+
+      <!-- プライベートカテゴリ -->
+      <h3>プライベート</h3>
+      <ul>
+        <li>プライベートのタスク1</li>
+        <li>プライベートのタスク2</li>
+      </ul>
+    </section>
+
+    <!-- 完了済みタスク -->
+    <section id="completed-tasks">
+      <h2>完了済みタスク</h2>
+      <ul>
+        <li>ゴミ出し</li>
+
     <section id="tasks">
       <h2>Task List</h2>
       <table>
@@ -49,24 +101,40 @@ body>
           <tr>
             <th>Task</th>
             <th>Priority</th>
+
             <th>Deadline</th>
+=======
+            <th>締め切りだよ</th>
+
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>Submit the report</td>
             <td class="stars" data-level="3">★★★</td>
+
             <td>Reiwa 7, September 5</td>
+=======
+               <td> 令和７　９月５日</td>
+
           </tr>
           <tr>
             <td>Clean the room</td>
             <td class="stars" data-level="2">★★</td>
+
             <td>Reiwa 7, September 6</td>
+=======
+            <td> 令和７　９月6日</td>
+
           </tr>
           <tr>
             <td>Check emails</td>
             <td class="stars" data-level="1">★</td>
+
             <td>Reiwa 7, September 7</td>
+=======
+            <td> 令和７　９月7日</td>
+
           </tr>
         </tbody>
       </table>
@@ -89,5 +157,6 @@ body>
     });
   </script>
 </body>
+
 </html>
 
