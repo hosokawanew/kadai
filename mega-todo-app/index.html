@@ -21,16 +21,54 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
+body>
+  <header>
+    <!-- Logo -->
+    <img src="image/ACM.png" alt="ACM Logo" id="logo">
+    <h1>Your ToDo List</h1>
+=======
+
 <body>
   <header>
     <!-- ロゴ画像の追加 -->
     <img src="image/ACM.png" alt="ACMロゴ" id="logo">
     <h1>あなたのToDoリスト</h1>
 
+
   </header>
 
   <main>
 
+
+    <!-- Incomplete Tasks -->
+    <section id="incomplete-tasks">
+      <h2>Incomplete Tasks</h2>
+
+      <!-- Work Category -->
+      <h3>Work</h3>
+      <ul>
+        <li>Work Task 1</li>
+        <li>Work Task 2</li>
+      </ul>
+
+      <!-- Private Category -->
+      <h3>Private</h3>
+      <ul>
+        <li>Private Task 1</li>
+        <li>Private Task 2</li>
+      </ul>
+    </section>
+
+    <!-- Completed Tasks -->
+    <section id="completed-tasks">
+      <h2>Completed Tasks</h2>
+      <ul>
+        <li>Take out the trash</li>
+      </ul>
+    </section>
+
+    <!-- Task Table -->
+=======
     <!-- 未完了タスク -->
     <section id="incomplete-tasks">
       <h2>未完了タスク</h2>
@@ -55,6 +93,7 @@
       <h2>完了済みタスク</h2>
       <ul>
         <li>ゴミ出し</li>
+
     <section id="tasks">
       <h2>Task List</h2>
       <table>
@@ -62,24 +101,40 @@
           <tr>
             <th>Task</th>
             <th>Priority</th>
+
+            <th>Deadline</th>
+=======
             <th>締め切りだよ</th>
+
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>Submit the report</td>
             <td class="stars" data-level="3">★★★</td>
+
+            <td>Reiwa 7, September 5</td>
+=======
                <td> 令和７　９月５日</td>
+
           </tr>
           <tr>
             <td>Clean the room</td>
             <td class="stars" data-level="2">★★</td>
+
+            <td>Reiwa 7, September 6</td>
+=======
             <td> 令和７　９月6日</td>
+
           </tr>
           <tr>
             <td>Check emails</td>
             <td class="stars" data-level="1">★</td>
+
+            <td>Reiwa 7, September 7</td>
+=======
             <td> 令和７　９月7日</td>
+
           </tr>
         </tbody>
       </table>
@@ -89,12 +144,13 @@
   <footer>
     <p>© 2025 ToDo Inc.</p>
   </footer>
+
   <script>
-    // クリック時に★を切り替える
+    // Change star level when clicked
     document.querySelectorAll(".stars").forEach(starCell => {
       starCell.addEventListener("click", () => {
         let level = parseInt(starCell.getAttribute("data-level")) || 1;
-        level = level % 5 + 1; // 1〜5の間でループ
+        level = level % 5 + 1;
         starCell.setAttribute("data-level", level);
         starCell.textContent = "★".repeat(level);
       });
